@@ -21,8 +21,9 @@
     dest: /usr/local/share/virus_scan.sh
     mode: 0755
     src: virus_scan.sh.j2
-    template_path: /templates
-
+    owner: root
+    group: root
+    
 - name: Install virus_scan cron job as {{ clamav_cron_frequency }}
   ansible.builtin.cron:
     cron_file: virus_scan
