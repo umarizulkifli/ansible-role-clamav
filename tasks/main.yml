@@ -17,7 +17,7 @@
     state: present
 
 - name: Install shell script to be run by cron
-  ansible.builtin.template:
+  ansible.builtin.copy:
     dest: /usr/local/share/virus_scan.sh
     mode: 0755
     src: virus_scan.sh.j2
